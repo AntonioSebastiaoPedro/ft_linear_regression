@@ -1,4 +1,5 @@
 import csv
+import json
 
 mileages = []
 prices = []
@@ -68,3 +69,17 @@ for time in range(epochs):
 print("Treinamento concluido com sucesso")
 print(f"Theta0 final (normalizado): {theta0}")
 print(f"Theta1 final (normalizado): {theta1}")
+
+
+modelo = {
+	"theta0": theta0,
+ 	"theta1": theta1,
+	"min_km": min_mileage,
+	"max_km": max_mileage,
+	"min_price": min_price,
+	"max_price": max_price,
+}
+
+with open("modelo.json", mode='w') as file:
+    json.dump(modelo, file, indent=4)
+    
