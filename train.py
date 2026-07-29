@@ -33,7 +33,6 @@ for pc in prices:
     norm_pc = (pc - min_price) / (max_price - min_price)
     norm_prices.append(norm_pc)
     
-print("\nDados normalizados:\n")
-print("kms normalizados: ", norm_mileages)
-print()
-print("Precos normalizados: ", norm_prices)
+print("\n--- Dados Normalizados ---")
+print("Primeiras 3 Quilometragens:", norm_mileages[:5])
+print("Primeiros 3 Preços:", norm_prices[:5])
